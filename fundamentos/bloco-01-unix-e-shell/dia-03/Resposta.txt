@@ -1,0 +1,32 @@
+367  ### Começando o exercício
+  368  mkdir unix_tests
+  369  touch trybe.txt
+  370  cp trybe.txt trybe_backup.txt
+  371  mv trybe.txt trybe-tests.txt
+  372  cd unix_tests/
+  373  mkdir backup
+  374  cd ..
+  375  mv trybe_backup.txt ./unix_tests/backup/
+  376  cd unix_tests/backup/
+  377  ls
+  378  cd ..
+  379  mkdir backup2
+  380  ls
+  381  cd backup
+  384  mv trybe_backup.txt ~/Trybe-exercicios/fundamentos/bloco-01-unix-e-shell/dia-03/unix_tests/backup2
+  385  cd ..
+  386  cd backup2
+  387  ls
+  388  cd ..
+  389  rmdir backup
+  390  mv backup2 backup
+  391  pwd
+  392  ls
+  393  history
+  395  rm -rf backup/
+  396  clear
+  397  cat > skills.txt
+  398  head -n 5 skills.txt 
+  399  tail -n 4 skills.txt 
+  400  rm *.txt
+  401  history
