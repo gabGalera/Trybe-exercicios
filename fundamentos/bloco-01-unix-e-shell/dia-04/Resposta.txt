@@ -1,0 +1,32 @@
+cd unix_test/
+cat > skills2.txt
+Internet
+Unix
+Bash
+cat >> skills2.txt 
+Shell
+Comando
+Computador
+Terminal
+Envelope
+cat skills2.txt 
+Internet
+Unix
+Bash
+Shell
+Comando
+Computador
+Terminal
+Envelope
+wc -w skills2.txt
+head -n 3 skills2.txt | sort | cat > top_skills.txt
+cat > phrases2.txt
+O rato roeu a roupa do rei de Roma
+O Mario está atrás do armário
+O peito do pé do Pedro é preto
+No Brasil tem brasileiros
+grep 'br' phrases2.txt | wc -l
+1
+grep -v 'br' phrases2.txt | wc -l
+3
+
