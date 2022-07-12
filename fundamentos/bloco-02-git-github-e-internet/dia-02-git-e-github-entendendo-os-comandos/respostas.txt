@@ -1,0 +1,16 @@
+### Começando os exercícios
+cd fundamentos/bloco-02-git-github-e-internet/dia-01-git-e-github-o-que-é-e-para-que-serve/
+cp trybe-skills.txt ~/Trybe-exercicios/fundamentos/bloco-02-git-github-e-internet/dia-02-git-e-github-entendendo-os-comandos/
+cd ~/Trybe-exercicios
+git status
+git checkout -b trybe-skills-changes
+cd ~/Trybe-exercicios/fundamentos/bloco-02-git-github-e-internet/dia-02-git-e-github-entendendo-os-comandos/
+cat >> trybe-skills.txt 
+- HTML
+- CSS
+git add trybe-skills.txt
+git commit -m "Adiciona nova skills"
+git push -u origin trybe-skills-changes
+git checkout main
+git branch
+
