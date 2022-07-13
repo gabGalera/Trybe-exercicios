@@ -29,4 +29,4 @@ grep 'br' phrases2.txt | wc -l
 1
 grep -v 'br' phrases2.txt | wc -l
 3
-
+cat countries.txt phrases2.txt > bunch_of_things.txt
