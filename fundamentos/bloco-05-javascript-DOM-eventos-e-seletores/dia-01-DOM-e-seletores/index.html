@@ -86,11 +86,12 @@
 
         tagMaiscula('p')
 
-        function consoleP(p){
+        function consoleP(element){
+          let p = document.getElementsByTagName(element);
             for (let i = 0; i < p.length; i += 1) {
-                console.log(p[i].innerText);
+              let a = console.log(p[i].innerText);
             }
-        }
+          }
 
         consoleP('p')
         
