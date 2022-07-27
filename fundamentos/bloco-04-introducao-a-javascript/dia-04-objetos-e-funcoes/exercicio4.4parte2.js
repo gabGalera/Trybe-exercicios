@@ -73,21 +73,57 @@ function indiceMaior(entry) {
 
 // Requisito 5
 
-let teste5 = [2, 3, 2, 5, 8, 2, 3];
+// let teste5 = [2, 3, 2, 5, 8, 2, 3];
 
-function mediana(entry){
-    let count = [];
-    for(i = 0; i < entry.length; i++){
-        count.push(0);
-        for(j = 0; j < entry.length; j++){
-            if(entry[i] == entry[j]){
-                count[i] = count[i] + 1 
-            }
-        }
+// function mediana(entry){
+//     let count = [];
+//     for(i = 0; i < entry.length; i++){
+//         count.push(0);
+//         for(j = 0; j < entry.length; j++){
+//             if(entry[i] == entry[j]){
+//                 count[i] = count[i] + 1 
+//             }
+//         }
+//     }
+
+//     index = indiceMaior(count);
+//     return entry[index]
+// }
+
+// console.log(mediana(teste5));
+
+// Requisito 6
+
+// let numero = 5;
+
+// function somatoria(entry){
+//     let soma = 0;
+//     for(i = 1; i <= entry; i++){
+//         soma = soma + i;
+//     }
+//     return soma
+// }
+
+// console.log(somatoria(numero));
+
+// Requisito 7
+
+let stringword = 'GabrielGalera';
+let stringending = 'Galera';
+
+function verificaFimPalavra(word, ending){
+    let b = ending.length + 1
+    let end = '';
+
+    for(i = b; i < word.length; i++){
+        end = end + word[i];
     }
 
-    index = indiceMaior(count);
-    return entry[index]
+    if(end == ending){
+        return true;
+    } else {
+        return false
+    }
 }
 
-console.log(mediana(teste5));
+console.log(verificaFimPalavra(stringword,stringending));
