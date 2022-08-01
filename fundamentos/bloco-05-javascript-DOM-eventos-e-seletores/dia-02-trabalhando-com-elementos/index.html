@@ -70,6 +70,64 @@
         body.appendChild(mainContent);
         mainContent.className = 'main-content';
 
+        // 🚀 Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+        const centerContent = document.createElement('section');
+        centerContent.className = 'center-content';
+        mainContent.appendChild(centerContent);
+
+        // 🚀 Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+        const p = document.createElement('p');
+        p.innerText = 'Hoje eu acordei para sorrir e mostrar os dentes; hoje eu acordei para matar o presidente. (Chorão)'
+        centerContent.appendChild(p);
+        
+        // 🚀 Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+        const leftContent = document.createElement('section');
+        leftContent.className = 'left-content';
+        mainContent.appendChild(leftContent);
+
+        // 🚀 Adicione a tag section com a classe right-content como filho da tag main criada no passo 2
+        const rightContent = document.createElement('section');
+        rightContent.className = 'right-content';
+        mainContent.appendChild(rightContent);
+        
+        // 🚀 Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+        const image = document.createElement('img');
+        image.src = 'https://picsum.photos/200';
+        image.className = 'small-image';
+        leftContent.appendChild(image);
+
+        // 🚀 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+        const ul = document.createElement('ul');
+        rightContent.appendChild(ul);
+        let lista = [];
+
+        for (i = 0; i < 10; i += 1) {
+          lista.push(document.createElement('li'));
+        }
+
+        lista[0].innerText = 'um';
+        lista[1].innerText = 'dois';
+        lista[2].innerText = 'três';
+        lista[3].innerText = 'quatro';
+        lista[4].innerText = 'cinco';
+        lista[5].innerText = 'seis';
+        lista[6].innerText = 'sete';
+        lista[7].innerText = 'oito';
+        lista[8].innerText = 'nove';
+        lista[9].innerText = 'dez';
+        
+        for (i = 0; i < 10; i += 1) {
+          ul.appendChild(lista[i]);
+        }
+        
+        // 🚀 Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+        lista = [];
+
+        for (i = 0; i < 3; i += 1) {
+          lista.push(document.createElement('h3'));
+          mainContent.appendChild(lista[i]);
+        }
+        
     </script>
   </body>
 </html>
