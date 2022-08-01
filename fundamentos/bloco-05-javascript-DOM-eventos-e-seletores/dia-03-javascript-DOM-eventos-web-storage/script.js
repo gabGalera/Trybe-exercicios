@@ -37,3 +37,38 @@ for (let i = 0; i < decemberDaysList.length; i += 1) {
     }
     document.querySelector('#days').appendChild(li);
 }
+
+// 🚀 Exercício 2:
+// Implemente uma função que crie dinamicamente um botão com o nome "Feriados".
+// Sua função deve receber um parâmetro com a string 'Feriados'
+// Adicione a este botão a ID "btn-holiday"
+// Adicione este botão como filho/filha da tag <div> com classe "buttons-container"
+
+let button = document.createElement('button');
+button.type = 'button'; 
+button.innerText = 'Feriados';
+button.id = 'btn-holiday';
+document.querySelector('.buttons-container').appendChild(button);
+
+// 🚀 Exercício 3:
+// Implemente uma função que muda a cor de fundo dos dias que possuem a classe "holiday".
+// Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos dias que possuem a classe "holiday"
+// 👀 É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial com a cor "rgb(238,238,238)".
+
+button.addEventListener('click', feriados);
+
+function feriados() {
+    let aux = document.querySelectorAll('.holiday');
+    if (document.querySelectorAll('.holiday')[0].style.color !== "white") {
+        for (i = 0; i < aux.length; i += 1) {
+            document.querySelectorAll('.holiday')[i].style.backgroundColor = "green";
+            document.querySelectorAll('.holiday')[i].style.color = "white";
+        }
+    } else {
+        for (i = 0; i < aux.length; i += 1) {
+            document.querySelectorAll('.holiday')[i].style.backgroundColor = "rgb(238,238,238)";
+            document.querySelectorAll('.holiday')[i].style.color = '#777';
+        }
+    }
+}
+
