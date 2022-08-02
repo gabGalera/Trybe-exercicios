@@ -80,3 +80,48 @@ sextaFeira.type = 'button';
 sextaFeira.innerText = 'Sexta-feira';
 sextaFeira.id = 'btn-friday';
 document.querySelector('.buttons-container').appendChild(sextaFeira);
+
+// 🚀 Exercício 5:
+// Implemente uma função que modifica o texto exibido nos dias que são Sexta-feira. Adicione ao botão "Sexta-feira" um evento de "click" e modifique o texto a ser exibido nos dias que são sextas-feiras.
+// 👀 É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial exibindo os dias.
+
+sextaFeira.addEventListener('click', function () { 
+    let aux = document.querySelectorAll('.friday');
+    let a = [];
+    if (document.querySelectorAll('.friday')[0].style.color !== "white") {
+        for (i = 0; i < aux.length; i += 1) {
+            a.push = document.querySelectorAll('.friday')[i].innerHTML;
+            document.querySelectorAll('.friday')[i].style.backgroundColor = "green";
+            document.querySelectorAll('.friday')[i].style.color = "white";
+            document.querySelectorAll('.friday')[i].innerText = "SEXTOU!"
+        }
+    } else {
+        for (i = 0; i < aux.length; i += 1) {
+            document.querySelectorAll('.friday')[i].style.backgroundColor = "rgb(238,238,238)";
+            document.querySelectorAll('.friday')[i].style.color = '#777';
+            document.querySelectorAll('.friday')[i].innerText = decemberDaysList[i + 5 + 6*i];
+        }
+    }
+});
+
+// 🚀 Exercício 6:
+// Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+// Dica - Propriedade: event.target.
+
+for (let i = 0; i < document.querySelectorAll('.day').length; i += 1) {
+    document.querySelectorAll('.day')[i].addEventListener('mouseover', funcao)
+    document.querySelectorAll('.day')[i].addEventListener('mouseout', funcao2)
+}
+
+function funcao(evento) {
+    evento.target.style.zoom = 3;
+}
+
+function funcao2(evento) {
+    evento.target.style.zoom = 1;
+}
+
+// 🚀 Exercício 7:
+// Implemente uma função que adicione uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+
