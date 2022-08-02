@@ -2,7 +2,6 @@
 let n = 10;
 let fat = 1;
 
-
 fato = function(n){
     
     for(i = 1; i <= n; i += 1){
