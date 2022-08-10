@@ -11,7 +11,8 @@
   }
   
   body {
-  
+    font-size: larger;  
+    margin: 10px;
   }
   
   article {
@@ -19,7 +20,7 @@
   }
   
   h1 {
-  
+    font-size: smaller;
   }
   
   h2 {
@@ -39,9 +40,44 @@
   }
   
   figure {
-      margin: 0;
+      margin: 100px;
   }
   
   figcaption {
     font-size: .8em;
+  }
+
+  @media screen and (min-width: 1000px) {
+    body {
+      background-color: red;
+      font-size: 30px;
+      margin: 30px;
+    }
+
+    h1 {
+      font-size: 50px
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      
+    }
+
+    img {
+      max-width: 250px;
+    }
+
+    figcaption {
+        font-size: .8em;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    body {
+      background-color: yellow;
+      font-size: 60px;
+      margin: 60px;
+      max-width: 2000px
+    }
   }
