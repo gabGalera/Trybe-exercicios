@@ -63,12 +63,45 @@ const ataqueDoMage = () => {
     }
 }
 
-console.log(ataqueDoMage());
-console.log(ataqueDoMage());
-console.log(ataqueDoMage());
-console.log(ataqueDoMage());
-console.log(ataqueDoMage());
-console.log(ataqueDoMage());
-console.log(ataqueDoMage());
-console.log(ataqueDoMage());
-console.log(ataqueDoMage())
+const gameActions = {
+    // Crie as HOFs neste objeto.
+    // Crie a primeira HOF que compõe o objeto gameActions. Ela será a função que simula o turno do personagem warrior. Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem warrior e atualizará os healthPoints do monstro dragon. Além disto ela também deve atualizar o valor da chave damage do warrior.
+    turnoDoWarrior: (danoDoWarrior) => {
+        dragon.healthPoints -= danoDoWarrior()
+        return dragon.healthPoints
+    },
+
+    // Crie a segunda HOF que compõe o objeto gameActions. Ela será a função que simula o turno do personagem mage. Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem mage e atualizará os healthPoints do monstro dragon. Além disto ela também deve atualizar o valor das chaves damage e mana do mage.
+
+    turnoDoMage: (ataqueDoMage) => {
+        dragon.healthPoints -= ataqueDoMage().ataque
+        return dragon.healthPoints
+    }, 
+
+    turnoDoDragao: (danoDoDragao) => {
+        mage.healthPoints -= danoDoDragao()
+        warrior.healthPoints -= danoDoDragao()
+        const obj = {
+            mage: mage.healthPoints,
+            warrior: warrior.healthPoints
+        }
+        return obj
+    },
+
+    battleMembers: () => {
+        const obj = {
+            dragon: dragon,
+            mage: mage,
+            warrior: warrior,
+        }
+        return obj
+    }
+    };
+
+    console.log(gameActions.turnoDoWarrior(danoDoWarrior));
+    console.log(gameActions.turnoDoMage(ataqueDoMage));
+    console.log(gameActions.turnoDoDragao(danoDoDragao));
+    console.log(warrior);
+    console.log(dragon);
+    console.log(mage);
+    console.log(gameActions.battleMembers());
