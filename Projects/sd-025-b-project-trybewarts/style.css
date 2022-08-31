@@ -1,0 +1,86 @@
+* {
+  margin: 5px;
+}
+
+body {
+  background-image: url('/24891332.jpg');
+  color: white;
+  background-size: cover;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.header {
+  display: flex;
+  background-color: rgb(50, 167, 145);
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.header h1 {
+  color: white;
+}
+
+.header img {
+  width: 5%;
+}
+
+.trybewarts-login {
+  display: flex;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  flex-direction: column;
+}
+
+#nome-sobrenome , #email-casa {
+  flex-direction: row;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
+  display: flex;
+}
+
+#counter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#autorizacao {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+#familia {
+  margin-left: 50px;
+}
+
+#linguagem {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.textarea {
+  font-size: 20px;
+}
+
+.formText {
+  width: 40%;
+  margin-left: 10%;
+  margin-top: 5%;
+}

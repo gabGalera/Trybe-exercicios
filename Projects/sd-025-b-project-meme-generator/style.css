@@ -1,0 +1,70 @@
+body {
+    background-color: white;
+}
+
+#meme-image-container {
+  position: absolute;
+  width: 30vw;
+  height: 30vh;
+  border: black solid 1px;
+  background-color: white;
+  contain: content;
+  content: inherit;
+  background-size: cover;
+}
+
+#meme-image { 
+  max-width: 30vw;
+  max-height: 30vh;
+  min-width: 30vw;
+  min-height: 30vh;
+  object-fit: cover;
+  position: absolute;
+  display: block;
+}
+
+#meme-text {
+  position: absolute;
+  display: block;
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  font-size: 30px;
+}
+
+#meme-insert {
+  position: absolute;
+  margin-top: 35vh; 
+  margin-left: 190px;
+}
+
+#text-input {  
+  position: absolute;
+  margin-top: 35vh;
+  
+}
+
+#fire {
+  position: absolute;
+  margin-top: 40vh;
+  background-color: rgb(255, 0, 0);
+}
+
+#water {
+  position: absolute;
+  margin-top: 40vh;
+  margin-left: 44px;
+  background-color: rgb(0, 0, 255);
+}
+
+#earth {
+  position: absolute;
+  margin-top: 40vh;
+  margin-left: 100px;
+  background-color: rgb(0, 128, 0);
+}
+
+#meme-1 , #meme-2 , #meme-3 , #meme-4 {
+  position: relative;
+  margin-top: 45vh;
+  border: black solid 1px;
+}
