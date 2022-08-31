@@ -18,14 +18,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
 - [ ] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
 - [ ] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [ ] 8-5: _[Projeto - Zoo functions](https://github.com/tryber/sd-025-b-project-zoo-functions)_
+- [ ] 8-5: _[Projeto - Zoo functions](https://github.com/gabGalera/Trybe-exercicios/tree/main/Projects/sd-025-b-project-zoo-functions)_
 
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
 
 - [ ] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [ ] 7-2: _JavaScript ES6 - Fluxo de exceção e Objectos_
 - [ ] 7-3: _Primeiros passos em Jest_
-- [ ] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/tryber/sd-025-b-project-js-unit-tests)_
+- [ ] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/gabGalera/Trybe-exercicios/tree/main/Projects/sd-025-b-project-js-unit-tests)_
 
 ##### Bloco 6: HTML & CSS avançado
 
@@ -34,7 +34,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 6-3: _CSS Flexbox - Part 1_
 - [ ] 6-4: _CSS Flexbox - Part 2_
 - [ ] 6-5: _CSS Responsivo - Mobile First_
-- [ ] 6-6: _[Projeto - Trybewarts](https://github.com/tryber/sd-025-b-project-trybewarts)_
+- [ ] 6-6: _[Projeto - Trybewarts](https://github.com/gabGalera/Trybe-exercicios/tree/main/Projects/sd-025-b-project-trybewarts)_
 
 ##### Bloco 5: Introdução - JavaScript - Projetos
 
@@ -42,11 +42,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 5-2: _JavaScript - Trabalhando com elementos_
 - [ ] 5-3: _JavaScript - Eventos_
 - [ ] 5-4: _JavaScript - Web Storage_
-- [ ] 5-5: _[Projeto - Meme Generator](https://github.com/tryber/sd-025-b-project-meme-generator)_
-- [ ] 5-6: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-025-b-project-pixels-art)_
-- [ ] 5-7: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-025-b-project-todo-list)_
-- [ ] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/tryber/sd-025-b-project-color-guess)_
-- [ ] 5-7: _[Projeto - Carta Misteriosa](https://github.com/tryber/sd-025-b-project-carta-misteriosa)_
+- [ ] 5-5: _[Projeto - Meme Generator](https://github.com/gabGalera/Trybe-exercicios/tree/main/Projects/sd-025-b-project-meme-generator)_
+- [ ] 5-6: _[Projeto - Arte com Pixels](https://github.com/gabGalera/Trybe-exercicios/tree/main/Projects/sd-025-b-project-pixels-art)_
+- [ ] 5-7: _[Projeto - Lista de tarefas](https://github.com/gabGalera/Trybe-exercicios/tree/main/Projects/sd-025-b-project-todo-list)_
+- [ ] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/gabGalera/Trybe-exercicios/tree/main/Projects/sd-025-b-project-color-guess)_
+- [ ] 5-7: _[Projeto - Carta Misteriosa](https://github.com/gabGalera/Trybe-exercicios/tree/main/Projects/sd-025-b-project-carta-misteriosa)_
 
 ##### Bloco 4: Introdução - JavaScript
 
@@ -54,7 +54,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 4-2: _JavaScript - Array e loop For_
 - [ ] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [ ] 4-4: _JavaScript - Objetos e funções_
-- [ ] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-025-b-project-playground-functions/tree/gabriel-galera-sd-025-b-project-playground-functions)_
+- [ ] 4-5: _[Projeto - Playground Functions]()_
 
 
 ##### Bloco 3: Introdução - HTML & CSS
@@ -63,7 +63,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 3-2: _HTML & CSS - Primeiros passos em CSS_
 - [ ] 3-3: _HTML & CSS - Seletores e posicionamento_
 - [ ] 3-4: _HTML Semântico_
-- [ ] 3-5: _[Projeto - Lessons Learned](https://github.com/tryber/sd-025-b-project-lessons-learned/tree/gabriel-galera-lessons-learned)_
+- [ ] 3-5: _[Projeto - Lessons Learned](https://github.com/gabGalera/Trybe-exercicios/tree/main/Projects/sd-025-b-project-lessons-learned)_
 
 ##### Bloco 2: Git & GitHub
 
