@@ -29,7 +29,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [ ] 7-2: _JavaScript ES6 - Fluxo de exceção e Objectos_
 - [ ] 7-3: _Primeiros passos em Jest_
-- [x ] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/gabGalera/Trybe-exercicios/tree/main/Fundamentos/Projects/sd-025-b-project-js-unit-tests)_
+- [x] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/gabGalera/Trybe-exercicios/tree/main/Fundamentos/Projects/sd-025-b-project-js-unit-tests)_
 
 ##### Bloco 6: HTML & CSS avançado
 
@@ -47,10 +47,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 5-3: _JavaScript - Eventos_
 - [ ] 5-4: _JavaScript - Web Storage_
 - [x] 5-5: _[Projeto - Meme Generator](https://github.com/gabGalera/Trybe-exercicios/tree/main/Fundamentos/Projects/sd-025-b-project-meme-generator)_
-- [ x] 5-6: _[Projeto - Arte com Pixels](https://github.com/gabGalera/Trybe-exercicios/tree/main/Fundamentos/Projects/sd-025-b-project-pixels-art)_
-- [ x] 5-7: _[Projeto - Lista de tarefas](https://github.com/gabGalera/Trybe-exercicios/tree/main/Fundamentos/Projects/sd-025-b-project-todo-list)_
-- [ x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/gabGalera/Trybe-exercicios/tree/main/Fundamentos/Projects/sd-025-b-project-color-guess)_
-- [ x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/gabGalera/Trybe-exercicios/tree/main/Fundamentos/Projects/sd-025-b-project-carta-misteriosa)_
+- [x] 5-6: _[Projeto - Arte com Pixels](https://github.com/gabGalera/Trybe-exercicios/tree/main/Fundamentos/Projects/sd-025-b-project-pixels-art)_
+- [x] 5-7: _[Projeto - Lista de tarefas](https://github.com/gabGalera/Trybe-exercicios/tree/main/Fundamentos/Projects/sd-025-b-project-todo-list)_
+- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/gabGalera/Trybe-exercicios/tree/main/Fundamentos/Projects/sd-025-b-project-color-guess)_
+- [x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/gabGalera/Trybe-exercicios/tree/main/Fundamentos/Projects/sd-025-b-project-carta-misteriosa)_
 
 ##### Bloco 4: Introdução - JavaScript
 
