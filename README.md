@@ -10,7 +10,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 #### Bloco 9: JavaScript e Testes Assíncronos
 
-- [ ] 9-1: _JavaScript Assíncrono e Callbacks_
+- [:green_check_mark:] 9-1: _JavaScript Assíncrono e Callbacks_
 
 [...]
 
