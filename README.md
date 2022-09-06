@@ -8,6 +8,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
+#### Bloco 9: JavaScript e Testes Assíncronos
+
+- [ ] 9-1: _JavaScript Assíncrono e Callbacks_
+
 [...]
 
 ## Fundamentos do Desenvolvimento Web :white_check_mark:
