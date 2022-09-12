@@ -13,6 +13,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 9-1: _JavaScript Assíncrono e Callbacks_
 - [x] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
 - [x] _[Project - JavaScript Async](https://github.com/gabGalera/Trybe-exercicios/tree/main/Front-end/Bloco_09_JavaScript_e_Testes_Ass%C3%ADncronos/Dia_02)_
+- [x] 9-3: _Jest - Testes Assíncronos_
 - [x] _[Project - Magic Card](https://github.com/gabGalera/Trybe-exercicios/tree/main/Front-end/Bloco_09_JavaScript_e_Testes_Ass%C3%ADncronos/Dia_03/sd-t25-b-exercise-magic-card)_
 
 [...]
