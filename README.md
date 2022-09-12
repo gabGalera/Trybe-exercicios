@@ -12,7 +12,9 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [x] 9-1: _JavaScript Assíncrono e Callbacks_
 - [x] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
+- [x] _[Project - JavaScript Async]()_
 - [x] 9-3: _Jest - Testes Assíncronos_
+- [x] _[Project - Magic Card]()_
 
 [...]
 
