@@ -45,6 +45,7 @@ const createPriceElement = () => {
   section.className = tp;
   document.getElementsByClassName('empty-cart')[0].insertAdjacentElement('beforebegin', section);
 };
+
 const numeroEmReais = (price) => {
   if (Math.floor([price - Math.floor(price)] * 100) >= 10) {
     return `R$ ${Math.floor(price)},${Math.floor([price - Math.floor(price)] * 100)}`;
@@ -70,11 +71,15 @@ const arrumaLocalStorage = (ident) => {
   localStorage.setItem('cartItems', JSON.stringify(arr));
 };
 
-const createCartItemElement = ({ id, title, price }) => {
+const createCartItemElement = ({ id, title, price }, thumbnail) => {
   const li = document.createElement('li');
+  li.appendChild(createProductImageElement(thumbnail));
+  li.appendChild(createCustomElement('span', 'cart__text', `${title}`));
+  li.appendChild(createCustomElement('span', 'cart__price', `${numeroEmReais(price)}`))
+
   li.className = 'cart__item';
   li.id = id;
-  li.innerText = `${title} \n ${numeroEmReais(price)}`;
+  // li.innerText = `${title} \n ${numeroEmReais(price)}`;
   const ident = id;
   li.addEventListener('click', () => {
     document.getElementById(id).remove();
@@ -87,18 +92,18 @@ const createCartItemElement = ({ id, title, price }) => {
   return li;
 };
 
-const colocaNoCarrinho = async (id) => {
+const colocaNoCarrinho = async (id, thumbnail) => {
   const listaItems = await fetchItem(id);
-  const items = createCartItemElement(listaItems);
+  const items = createCartItemElement(listaItems, thumbnail);
   document.getElementsByClassName('cart__items')[0].appendChild(items);
   
   const report = JSON.parse(localStorage.getItem('cartItems'));
   
   if (report === null) {
-    const obj = { id: listaItems.id, title: listaItems.title, price: listaItems.price };
+    const obj = { id: listaItems.id, title: listaItems.title, price: listaItems.price, image: thumbnail };
     saveCartItems(obj);
   } else {
-    const obj = { id: listaItems.id, title: listaItems.title, price: listaItems.price };
+    const obj = { id: listaItems.id, title: listaItems.title, price: listaItems.price, image: thumbnail };
     report.push(obj);
     localStorage.removeItem('cartItems');
     localStorage.setItem('cartItems', JSON.stringify(report));
@@ -110,16 +115,17 @@ const colocaNoCarrinho = async (id) => {
   document.getElementsByClassName(tp)[0].innerText = `Subtotal: ${numeroEmReais(totalPrice)}`; 
 };
 
+
 const createProductItemElement = ({ id, title, thumbnail, price }) => {
   const section = document.createElement('section');
   section.className = 'item';
-  
+    
   section.appendChild(createCustomElement('span', 'item_id', id));
   section.appendChild(createProductImageElement(thumbnail));
   section.appendChild(createCustomElement('span', 'item__title', title));
   section.appendChild(createCustomElement('span', 'price', numeroEmReais(price)));
   section.appendChild(createCustomElement('button', 'item__add', 'Adicionar ao carrinho!'))
-    .addEventListener('click', () => colocaNoCarrinho(id));
+    .addEventListener('click', () => colocaNoCarrinho(id, thumbnail));
   
     return section;
   };
@@ -175,7 +181,10 @@ window.onload = async () => {
   const report = JSON.parse(getSavedCartItems());
   if (report !== null) {
     report.forEach(async (e) => {
-      document.getElementsByClassName('cart__items')[0].appendChild(createCartItemElement(e));
+      const id =  e.id;
+      const title = e.title;
+      const price = e.price;
+      document.getElementsByClassName('cart__items')[0].appendChild(createCartItemElement({ id, title, price }, e.image));
     });
   }
   const subTotal = `Subtotal: ${numeroEmReais(localStorage.getItem('price'))}`;

@@ -45,6 +45,11 @@ body {
   
 }
 
+.cart__text {
+  align-self: flex-end;
+  display: inline-block;
+} 
+
 .container-cartTitle span {
   z-index: 1;
 }
@@ -73,6 +78,9 @@ body {
   z-index: 0;
 }
 
+.cart__price {
+  font-size: large;
+}
 .container-cartTitle .cart__title {
   color: white;
   font-size: 20px;
@@ -174,6 +182,7 @@ body {
 
 .cart__item {
   padding-top: 3%;
+  justify-content: flex-start;
 }
 
 .empty-cart {
