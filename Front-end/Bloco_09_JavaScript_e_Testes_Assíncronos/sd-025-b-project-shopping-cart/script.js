@@ -74,8 +74,8 @@ const arrumaLocalStorage = (ident) => {
 const createCartItemElement = ({ id, title, price }, thumbnail) => {
   const li = document.createElement('li');
   li.appendChild(createProductImageElement(thumbnail));
-  li.appendChild(createCustomElement('span', 'cart__text', `${title}`));
-  li.appendChild(createCustomElement('span', 'cart__price', `${numeroEmReais(price)}`))
+  li.insertAdjacentElement('beforeend', createCustomElement('span', 'cart__text', `${title}`));
+  li.insertAdjacentElement('beforeend', createCustomElement('span', 'cart__price', `${numeroEmReais(price)}`))
 
   li.className = 'cart__item';
   li.id = id;
