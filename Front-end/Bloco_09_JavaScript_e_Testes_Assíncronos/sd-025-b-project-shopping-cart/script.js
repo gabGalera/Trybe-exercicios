@@ -71,15 +71,19 @@ const arrumaLocalStorage = (ident) => {
   localStorage.setItem('cartItems', JSON.stringify(arr));
 };
 
+const adjacentElement = (element, position, text, entry) => 
+  element.insertAdjacentElement(position, createCustomElement('span', text, entry));
+
 const createCartItemElement = ({ id, title, price }, thumbnail) => {
   const li = document.createElement('li');
   li.appendChild(createProductImageElement(thumbnail));
-  li.insertAdjacentElement('beforeend', createCustomElement('span', 'cart__text', `${title}`));
-  li.insertAdjacentElement('beforeend', createCustomElement('span', 'cart__price', `${numeroEmReais(price)}`))
+  const div = createCustomElement('div', 'preco-texto', '');
+  adjacentElement(div, 'beforeend', 'cart__text', `${title}`);
+  adjacentElement(div, 'beforeend', 'cart__price', `${numeroEmReais(price)}`);
+  li.appendChild(div);
 
   li.className = 'cart__item';
   li.id = id;
-  // li.innerText = `${title} \n ${numeroEmReais(price)}`;
   const ident = id;
   li.addEventListener('click', () => {
     document.getElementById(id).remove();
@@ -114,7 +118,6 @@ const colocaNoCarrinho = async (id, thumbnail) => {
   localStorage.setItem('price', totalPrice);
   document.getElementsByClassName(tp)[0].innerText = `Subtotal: ${numeroEmReais(totalPrice)}`; 
 };
-
 
 const createProductItemElement = ({ id, title, thumbnail, price }) => {
   const section = document.createElement('section');
@@ -181,9 +184,7 @@ window.onload = async () => {
   const report = JSON.parse(getSavedCartItems());
   if (report !== null) {
     report.forEach(async (e) => {
-      const id =  e.id;
-      const title = e.title;
-      const price = e.price;
+      const { id, title, price } = e;
       document.getElementsByClassName('cart__items')[0].appendChild(createCartItemElement({ id, title, price }, e.image));
     });
   }

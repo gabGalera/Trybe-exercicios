@@ -46,8 +46,9 @@ body {
 }
 
 .cart__text {
-  align-self: flex-end;
+  position: absolute;
   display: inline-block;
+  width: 1px;
 } 
 
 .container-cartTitle span {
@@ -79,13 +80,22 @@ body {
 }
 
 .cart__price {
+  display: inline-block;
   font-size: large;
+  width: 50%;
 }
+
 .container-cartTitle .cart__title {
   color: white;
   font-size: 20px;
   padding-left: 35px;
   font-weight: 700;
+}
+
+.preco-texto {
+  display: inline-block;
+  justify-content: flex-start;
+  width: 80%;
 }
 
 .container {
@@ -182,6 +192,7 @@ body {
 
 .cart__item {
   padding-top: 3%;
+  /* display: inline; */
   justify-content: flex-start;
 }
 
