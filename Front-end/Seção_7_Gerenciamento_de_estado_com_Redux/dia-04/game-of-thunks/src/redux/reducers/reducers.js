@@ -1,7 +1,7 @@
 import { SEND_REQUEST, RECEIVE_REQUEST, ERROR } from '../actions/actions'
 
 const INITIAL_STATE = {
-  infosChars: [{}],
+  infosChars: {},
   isLoading: false,
 }
 

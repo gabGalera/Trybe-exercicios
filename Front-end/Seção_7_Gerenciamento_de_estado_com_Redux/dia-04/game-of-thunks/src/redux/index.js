@@ -1,7 +1,7 @@
 import { legacy_createStore as createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import infoReducer from './reducers/reducers';
-import { composeWithDevTools } from '@redux-devtools/extension/lib/types/logOnly';
+import { composeWithDevTools } from '@redux-devtools/extension';
 
 const store = createStore(infoReducer, composeWithDevTools(applyMiddleware(thunk)));
 
