@@ -20,9 +20,9 @@ export const errorRequest = (payload) => ({
 
 export function fecthAPI(name) {
   return async (dispatch) => {
-    dispatch(sendRequest(name));
+    dispatch(sendRequest());
     return fetch(`https://anapioficeandfire.com/api/characters?name=${name}`)
-      .then((response) => response.JSON)
-      .then((data) => dispatch(data))
+      .then((response) => response.json())
+      .then((data) => dispatch(receiveRequest(data)))
   }
 }

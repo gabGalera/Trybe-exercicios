@@ -3,6 +3,7 @@ import { SEND_REQUEST, RECEIVE_REQUEST, ERROR } from '../actions/actions'
 const INITIAL_STATE = {
   infosChars: {},
   isLoading: false,
+  fetch: false,
 }
 
 const infoReducer = (state = INITIAL_STATE, action) => {
@@ -16,6 +17,7 @@ const infoReducer = (state = INITIAL_STATE, action) => {
       return {
         infosChars: action.payload,
         isLoading: false,
+        fetch: true,
       }
     case ERROR:
       return {
