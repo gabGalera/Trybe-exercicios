@@ -6,6 +6,8 @@ services:
       - 2368:2368
     depends_on:
       - "db"
+    networks:
+      - my-network
     environment:
       database__client: mysql
       database__connection__host: db
@@ -14,5 +16,14 @@ services:
       database__connection__database: ghost
   db:
     image: mysql:5.7
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - my-network
     environment:
       MYSQL_ROOT_PASSWORD: password
+volumes:
+  db-data:
+
+networks:
+  my-network:
