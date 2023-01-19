@@ -1,1 +1,0 @@
-SELECT description, title FROM sakila.film WHERE title LIKE "%ace%";
