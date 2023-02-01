@@ -40,9 +40,60 @@ async function deleteChars10and6() {
   return promise
 }
 
+async function simpsonFamily() {
+  const promise = new Promise(async (resolve, reject) => {
+    const data = await fs.readFile('./simpsons.json', 'utf-8');
+    const char = JSON
+      .parse(data)
+      .filter((char) => Number(char.id) === 1 || Number(char.id) === 2 || Number(char.id) === 3 || Number(char.id) === 4)
+    if(!char) {
+      reject(new Error(`Deu ruim.`));
+    } 
+    await fs.writeFile('./simpsonFamily.json', JSON.stringify(char))
+    resolve(char)
+  })
+  
+  return promise
+}
+
+async function simpsonFamilyWithNelson() {
+  const promise = new Promise(async (resolve, reject) => {
+    const data = await fs.readFile('./simpsons.json', 'utf-8');
+    const char = JSON
+      .parse(data)
+      .filter((char) => Number(char.id) === 1 || Number(char.id) === 2 || Number(char.id) === 3 || Number(char.id) === 4 || char.name === 'Nelson Muntz')
+    if(!char) {
+      reject(new Error(`Deu ruim.`));
+    } 
+    await fs.writeFile('./simpsonFamily.json', JSON.stringify(char))
+    resolve(char)
+  })
+  
+  return promise
+}
+
+async function simpsonFamilyWithMaggie() {
+  const promise = new Promise(async (resolve, reject) => {
+    const data = await fs.readFile('./simpsons.json', 'utf-8');
+    const char = JSON
+      .parse(data)
+      .filter((char) => Number(char.id) === 1 || Number(char.id) === 2 || Number(char.id) === 3 || Number(char.id) === 4 || char.name === 'Maggie Simpson')
+    if(!char) {
+      reject(new Error(`Deu ruim.`));
+    } 
+    await fs.writeFile('./simpsonFamily.json', JSON.stringify(char))
+    resolve(char)
+  })
+  
+  return promise
+}
+
 getAllChar()
 getCharById(3)
   .then(result => console.log(result))
   .catch(err => console.log(err.message))
 deleteChars10and6()
   .then(result => console.log(result))
+simpsonFamily()
+simpsonFamilyWithNelson()
+simpsonFamilyWithMaggie()
