@@ -8,7 +8,7 @@ const existingId = (req, res, next) => {
   if (team) {
     next();
   } else {
-    res.sendStatus(404);
+    res.sendStatus(404).json({ message: 'Time não encontrado' });
   }
 };
 
