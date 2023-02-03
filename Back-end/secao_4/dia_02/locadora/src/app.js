@@ -26,7 +26,8 @@ app.get('/movies/:id', async (req, res) => {
 
 app.post('/movies', async (req, res) => {
   try {
-    await writeJSON(req.body);
+    const data = await readJSON();
+    await writeJSON({ id: data.length + 1, ...req.body });
     res.status(200).json(req.body);
   } catch (err) {
     res.status(500).send({ message: err.message });
