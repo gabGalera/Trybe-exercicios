@@ -1,5 +1,5 @@
 const express = require('express');
-const readJSON = require('./utils/fsUtils');
+const { readJSON, writeJSON } = require('./utils/fsUtils');
 
 const app = express();
 
@@ -19,6 +19,15 @@ app.get('/movies/:id', async (req, res) => {
     const data = await readJSON();
     const movies = data.find((movie) => movie.id === Number(req.params.id));
     res.status(200).json(movies);
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+});
+
+app.post('/movies', async (req, res) => {
+  try {
+    await writeJSON(req.body);
+    res.status(200).json(req.body);
   } catch (err) {
     res.status(500).send({ message: err.message });
   }
