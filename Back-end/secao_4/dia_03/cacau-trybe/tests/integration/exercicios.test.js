@@ -19,3 +19,27 @@ describe('Usando o método GET em /chocolates/total', function () {
     expect(response.body).to.deep.equal({ totalChocolates: 4 });
   });
 });
+
+describe('Usando o método GET em /chocolates/search?name=Mo', function () {
+  it('Retorna o total de chocolates', async function () {
+    const output = [
+      {
+        "id": 3,
+        "name": "Mon Chéri",
+        "brandId": 2
+      },
+      {
+        "id": 4,
+        "name": "Mounds",
+        "brandId": 3
+      }
+    ]
+    
+    response = await chai
+        .request(app)
+        .get('/chocolates/search?name=Mo');
+
+    expect(response.status).to.be.equal(200);
+    expect(response.body).to.deep.equal(output);
+  });
+});
