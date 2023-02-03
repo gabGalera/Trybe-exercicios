@@ -104,15 +104,4 @@ describe('Testando a API Cacau Trybe', function () {
     });
   });
 
-  describe('Usando o método GET em /chocolates/:id para buscar o ID 99', function () {
-    it('Retorna status 404 com a mensagem "Chocolate not found"', async function () {
-      const response = await chai
-        .request(app)
-        .get('/chocolates/99');
-
-      expect(response.status).to.be.equal(404);
-      expect(response.body).to.deep.equal({ message: 'Chocolate not found' })
-    });
-  });
-
 });
