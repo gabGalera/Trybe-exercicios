@@ -21,7 +21,7 @@ describe('Usando o método GET em /chocolates/total', function () {
 });
 
 describe('Usando o método GET em /chocolates/search?name=Mo', function () {
-  it('Retorna o total de chocolates', async function () {
+  it('Retorna os chocolates filtrados', async function () {
     const output = [
       {
         "id": 3,
@@ -42,4 +42,34 @@ describe('Usando o método GET em /chocolates/search?name=Mo', function () {
     expect(response.status).to.be.equal(200);
     expect(response.body).to.deep.equal(output);
   });
+});
+
+describe('Usando o método PUT em /chocolates/:id', function () {
+  it('Atualiza um chocolate existente', async function () {
+
+    const response = await chai
+
+      .request(app)
+
+      .put('/chocolates/1').send({
+
+      name: 'Mint Pretty Good',
+
+      brandId: 2,
+
+    });
+
+
+    expect(response.status).to.be.equal(200);
+
+    expect(response.body.chocolate).to.deep.equal({
+
+      id: 1,
+
+      name: 'Mint Pretty Good',
+
+      brandId: 2,
+
+    });
+  })
 });
