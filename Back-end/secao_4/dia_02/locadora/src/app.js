@@ -1,4 +1,6 @@
 const express = require('express');
+const fs = require('fs').promises;
+const path = require('path');
 const { readJSON, writeJSON } = require('./utils/fsUtils');
 
 const app = express();
@@ -43,6 +45,21 @@ app.put('/movies/:id', async (req, res) => {
     data[index] = { id, movie, price };
     await writeJSON(data);
     res.status(200).json(data);
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+});
+
+app.delete('/movies/:id', async (req, res) => {
+  try {
+    const id = Number(req.params.id);
+    const data = await readJSON();
+    const newData = data.filter((element) => element.id !== id);
+    await fs.writeFile(
+      path.resolve(__dirname, '../movies.json'), 
+      JSON.stringify([...newData]),
+    );
+    res.status(200).json(newData);
   } catch (err) {
     res.status(500).send({ message: err.message });
   }
