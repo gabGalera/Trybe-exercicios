@@ -14,7 +14,7 @@ async function readJSON() {
 
 async function writeJSON(file) {
   try {
-    await fs.writeFile('../data.json', JSON.stringify(file));
+    await fs.writeFile(path.resolve(__dirname, '../data.json'), JSON.stringify(file));
   } catch (err) {
     console.error(err.message);
   }
