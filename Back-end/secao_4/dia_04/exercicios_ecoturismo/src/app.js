@@ -5,7 +5,18 @@ const app = express();
 
 app.use(express.json());
 
-app.post('/activities', async (req, res) => {
+async function validateActivities(req, res, next) {
+  const { name } = req.body;
+  if (name && name.length > 4) {
+    next();
+  } else if (!name) {
+    res.status(400).json({ message: 'O campo nome é obrigatório' });
+  } else {
+    res.status(400).json({ message: 'O campo deve ter pelo menos 4 caracteres' });
+  }
+}
+
+app.post('/activities', validateActivities, async (req, res) => {
   try {
     const { body } = req;
     await writeJSON(body);
