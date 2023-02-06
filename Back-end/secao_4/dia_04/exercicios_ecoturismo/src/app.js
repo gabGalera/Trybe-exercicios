@@ -7,11 +7,22 @@ const {
   validateDescription,
   validateCreatedAt,
   validateRating,
-  validateDifficulty } = require('../middlewares/validateActivities');
+  validateDifficulty,
+  validateSignup } = require('../middlewares/validateActivities');
 
 const app = express();
 
 app.use(express.json());
+
+async function validateToken(req, res, next) {
+  const { authorization } = req.headers;
+
+  if (!authorization || authorization.length !== 16) {
+    res.status(401).json({ message: 'Token inválido!' });
+  } else {
+    next();
+  }
+}
 
 app.post('/activities', 
   validateName, 
@@ -20,6 +31,7 @@ app.post('/activities',
   validateCreatedAt,
   validateRating, 
   validateDifficulty,
+  validateToken,
   async (req, res) => {
     try {
       const { body } = req;
@@ -33,17 +45,6 @@ app.post('/activities',
       console.error(err.message);
     }
   });
-
-async function validateSignup(req, res, next) {
-  const { body } = req;
-  if (!body.email || !body.password || !body.firstName || !body.phone) {
-    res.status(401).json({
-      message: 'Campos ausentes!',
-    });
-  } else {
-    next();
-  }
-}
 
 function generateToken() {
   return crypto.randomBytes(8).toString('hex');

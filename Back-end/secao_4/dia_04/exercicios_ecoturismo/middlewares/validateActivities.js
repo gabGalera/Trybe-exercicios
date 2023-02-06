@@ -80,6 +80,17 @@ async function validateDifficulty(req, res, next) {
   }
 }
 
+async function validateSignup(req, res, next) {
+  const { body } = req;
+  if (!body.email || !body.password || !body.firstName || !body.phone) {
+    res.status(401).json({
+      message: 'Campos ausentes!',
+    });
+  } else {
+    next();
+  }
+}
+
 module.exports = { 
   validateName, 
   validatePrice,
@@ -87,4 +98,5 @@ module.exports = {
   validateCreatedAt,
   validateRating,
   validateDifficulty,
+  validateSignup,
 };
