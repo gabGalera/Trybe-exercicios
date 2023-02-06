@@ -1,6 +1,6 @@
 async function validateName(req, res, next) {
   const { name } = req.body;
-  if (name && name.length > 4) {
+  if (name && name.length >= 4) {
     next();
   } else if (!name) {
     res.status(400).json({ message: 'O campo nome é obrigatório' });
