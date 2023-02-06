@@ -1,29 +1,52 @@
 const express = require('express');
 const { readJSON, writeJSON } = require('../utils/fsUtils');
+const { 
+  validateName, 
+  validatePrice, 
+  validateDescription } = require('../middlewares/validateActivities');
 
 const app = express();
 
 app.use(express.json());
 
-async function validateActivities(req, res, next) {
-  const { name } = req.body;
-  if (name && name.length > 4) {
-    next();
-  } else if (!name) {
-    res.status(400).json({ message: 'O campo nome é obrigatório' });
+function mustBeAValidDay(day) {
+  return Number(day) > 31 || Number(day) < 1; 
+}
+function mustBeAValidMonth(month) { 
+  return Number(month) > 12 || Number(month) < 1; 
+}
+
+function mustBeAValidYear(year) {
+  return Number(year) < 0;
+}
+async function validateCreatedAt(req, res, next) {
+  const { description: { createdAt } } = req.body;
+  const message = 'O campo createdAt deve ter o formato \'dd/mm/aaaa\'';
+  if (
+    !createdAt 
+    || mustBeAValidDay(createdAt.split('/')[0])
+    || mustBeAValidMonth(createdAt.split('/')[1])
+    || mustBeAValidYear(createdAt.split('/')[2])
+    ) {
+    res.status(400).json({ message });
   } else {
-    res.status(400).json({ message: 'O campo deve ter pelo menos 4 caracteres' });
+    next();
   }
 }
 
-app.post('/activities', validateActivities, async (req, res) => {
-  try {
-    const { body } = req;
-    await writeJSON(body);
-    res.status(201).json({ message: 'Atividade cadastrada com sucesso!' });
-  } catch (err) {
-    console.error(err.message);
-  }
-});
+app.post('/activities', 
+  validateName, 
+  validatePrice, 
+  validateDescription, 
+  validateCreatedAt, 
+  async (req, res) => {
+    try {
+      const { body } = req;
+      await writeJSON(body);
+      res.status(201).json({ message: 'Atividade cadastrada com sucesso!' });
+    } catch (err) {
+      console.error(err.message);
+    }
+  });
 
 module.exports = app;
