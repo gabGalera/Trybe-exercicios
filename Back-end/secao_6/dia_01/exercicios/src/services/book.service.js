@@ -6,7 +6,14 @@ const getAll = async () => {
   return books;
 }
 
+const getById = async (id) => {
+  const book = await BookModel.findByPk(id);
+
+  return book;
+}
+
 module.exports = {
   getAll,
+  getById,
 }
 
