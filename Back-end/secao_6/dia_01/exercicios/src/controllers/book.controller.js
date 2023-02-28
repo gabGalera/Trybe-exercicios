@@ -12,7 +12,7 @@ const getAll = async (_req, res) => {
 const getById = async (req, res) => {
   try {
     const { id } = req.params;
-    const book = BookService.getById(id);
+    const book = await BookService.getById(Number(id));
 
     if(!book) return res.status(404).json({ message: 'Book not found' })
 
@@ -22,7 +22,15 @@ const getById = async (req, res) => {
   }
 }
 
+const createBook = async (req, res) => {
+  const { title, author, pageQuantity } = req.body;
+  const newBook = await BookService.create({ title, author, pageQuantity });
+
+  return res.status(200).json(newBook);
+}
+
 module.exports = {
   getAll,
   getById,
+  createBook,
 };
