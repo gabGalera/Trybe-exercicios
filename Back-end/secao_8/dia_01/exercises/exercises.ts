@@ -14,6 +14,18 @@ export function getPolygonPerimeter(sides: number[]): number {
   return sides.reduce((acc, side) => acc + side, 0);
 }
 
+export function getRhombusArea(BiggerDiagonal: number, SmallerDiagonal: number): number {
+  return BiggerDiagonal * SmallerDiagonal / 2;
+}
+
+export function getTrapezeArea(BiggerBase: number, SmallerBase: number, height: number): number {
+  return ((BiggerBase + SmallerBase) * height ) / 2;
+}
+
+export function getCircleArea(radius: number): number {
+  return Math.PI * radius ** 2;
+}
+
 export function triangleCheck(
   sideA: number,
   sideB: number,

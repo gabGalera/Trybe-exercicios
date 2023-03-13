@@ -21,6 +21,18 @@ console.log("\nO PERÍMETRO DE UM:");
 console.log(`- Quadrado de lado 10cm: ${Ex.getPolygonPerimeter([10, 10, 10, 10])}cm`);
 console.log(`- Retângulo de base 10cm e altura 25cm: ${Ex.getPolygonPerimeter([10, 25, 10, 25])}cm`);
 console.log(`- Triângulo cujos lados tem 10cm cada: ${Ex.getPolygonPerimeter([10, 10, 10])}cm`);
+console.log(`- Losângulo cujos lados tem 10cm cada: ${Ex.getRhombusArea(32, 18)}cm`);
+console.log(`- Losângulo cujos lados tem 10cm cada: ${Ex.getRhombusArea(200, 50)}cm`);
+console.log(`- Losângulo cujos lados tem 10cm cada: ${Ex.getRhombusArea(75, 25)}cm`);
+
+console.log(`- Trapézio cujos lados tem 10cm cada: ${Ex.getTrapezeArea(100, 70, 50)}cm`);
+console.log(`- Trapézio cujos lados tem 10cm cada: ${Ex.getTrapezeArea(75, 50, 35)}cm`);
+console.log(`- Trapézio cujos lados tem 10cm cada: ${Ex.getTrapezeArea(150, 120, 80)}cm`);
+
+console.log(`- Circle cujos lados tem 10cm cada: ${Ex.getCircleArea(25)}cm`);
+console.log(`- Circle cujos lados tem 10cm cada: ${Ex.getCircleArea(100)}cm`);
+console.log(`- Circle cujos lados tem 10cm cada: ${Ex.getCircleArea(12.5)}cm`);
+
 
 console.log("\nVERIFICA A EXISTÊNCIA DE TRIÂNGULOS CUJOS LADOS TÊM:");
 
